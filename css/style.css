@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
+:root {
+  /* Palette principale */
+  --color-primary: #5B9BD5;
+  --color-primary-hover: #78B7E6;
+  --color-background: #171E24;
+  --color-surface: #202A33;
+  --color-foreground: #EEF1F3;
+  --color-muted: #A9B4BC;
+  --color-border: #34414B;
+  --color-accent: #00B8D9;
+
+  /* Tons secondaires (conservés du design d'origine) */
+  --color-muted-dim: #5f6d76;
+  --color-border-soft: #2a343c;
+  --color-surface-dark: #1d262d;
+  --color-on-primary: #0f1418;
+  --color-success: #6fbf7a;
+  --color-warning: #e8a33d;
+  --color-error: #ef4444;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +32,8 @@ html {
 }
 
 body {
-  background-color: #171e24;
-  color: #eef1f3;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   font-family: 'IBM Plex Sans', sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +57,7 @@ header {
   z-index: 50;
   background: rgba(23, 30, 36, 0.95);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid #35414a;
+  border-bottom: 1px solid var(--color-border);
 }
 
 nav {
@@ -65,7 +86,7 @@ nav {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
 }
 
 .nav-links {
@@ -76,12 +97,12 @@ nav {
 
 .nav-links a {
   font-size: 13px;
-  color: #93a1ab;
+  color: var(--color-muted);
   transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: #5b9bd5;
+  color: var(--color-primary);
 }
 
 /* Hero Section */
@@ -92,7 +113,7 @@ nav {
 .accent-line {
   width: 80px;
   height: 3px;
-  background: #5b9bd5;
+  background: var(--color-primary);
   margin-bottom: 32px;
 }
 
@@ -107,7 +128,7 @@ nav {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #6fbf7a;
+  background: var(--color-success);
   animation: pulse 2.4s infinite;
 }
 
@@ -120,7 +141,7 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   text-transform: uppercase;
 }
 
@@ -129,20 +150,20 @@ h1 {
   font-size: clamp(40px, 8vw, 64px);
   font-weight: 700;
   line-height: 1.1;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin-bottom: 12px;
 }
 
 .title {
   font-size: 20px;
   font-weight: 500;
-  color: #5b9bd5;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
 .description {
   font-size: 15.5px;
-  color: #93a1ab;
+  color: var(--color-muted);
   line-height: 1.7;
   max-width: 65ch;
   margin-bottom: 28px;
@@ -154,7 +175,7 @@ h1 {
   gap: 24px;
   margin-bottom: 32px;
   padding-bottom: 32px;
-  border-bottom: 1px solid #35414a;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .fact {
@@ -165,7 +186,7 @@ h1 {
 .fact-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 8px;
@@ -173,7 +194,7 @@ h1 {
 
 .fact-value {
   font-size: 14px;
-  color: #eef1f3;
+  color: var(--color-foreground);
 }
 
 .cta-group {
@@ -196,24 +217,24 @@ h1 {
 }
 
 .btn-primary {
-  background: #5b9bd5;
-  color: #0f1418;
-  border-color: #5b9bd5;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
 }
 
 .btn-primary:hover {
-  background: #71aade;
+  background: var(--color-primary-hover);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #93a1ab;
-  border-color: #35414a;
+  color: var(--color-muted);
+  border-color: var(--color-border);
 }
 
 .btn-secondary:hover {
-  border-color: #5b9bd5;
-  color: #5b9bd5;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* Section */
@@ -244,7 +265,7 @@ section {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin: 0;
   white-space: nowrap;
 }
@@ -252,13 +273,13 @@ section {
 .section-line {
   flex: 1;
   height: 2px;
-  background: #5b9bd5;
+  background: var(--color-primary);
 }
 
 /* Profil */
 .profil-text {
   max-width: 70ch;
-  color: #93a1ab;
+  color: var(--color-muted);
   font-size: 15.5px;
   line-height: 1.75;
 }
@@ -268,7 +289,7 @@ section {
 }
 
 .profil-text strong {
-  color: #eef1f3;
+  color: var(--color-foreground);
   font-weight: 600;
 }
 
@@ -278,7 +299,7 @@ section {
   grid-template-columns: 120px 1fr;
   gap: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #2a343c;
+  border-bottom: 1px solid var(--color-border-soft);
   margin-bottom: 32px;
 }
 
@@ -290,33 +311,33 @@ section {
 .job-date {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
-  color: #e8a33d;
+  color: var(--color-warning);
   font-weight: 600;
 }
 
 .job-title {
   font-size: 18px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin-bottom: 4px;
 }
 
 .job-company {
   font-size: 14px;
-  color: #5b9bd5;
+  color: var(--color-primary);
   font-family: 'IBM Plex Mono', monospace;
   margin-bottom: 8px;
 }
 
 .job-context {
   font-size: 13px;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   font-style: italic;
   margin-bottom: 12px;
 }
 
 .job ul {
-  color: #93a1ab;
+  color: var(--color-muted);
   font-size: 14px;
   line-height: 1.7;
   padding-left: 20px;
@@ -342,35 +363,35 @@ section {
 }
 
 .project-card {
-  background: #212b33;
-  border: 1px solid #35414a;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   padding: 24px;
   border-radius: 4px;
   transition: all 0.2s;
 }
 
 .project-card:hover {
-  border-color: #5b9bd5;
+  border-color: var(--color-primary);
   transform: translateY(-2px);
 }
 
 .project-date {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   margin-bottom: 12px;
 }
 
 .project-title {
   font-size: 16px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin-bottom: 8px;
 }
 
 .project-desc {
   font-size: 14px;
-  color: #93a1ab;
+  color: var(--color-muted);
   margin-bottom: 12px;
   line-height: 1.6;
 }
@@ -384,10 +405,16 @@ section {
 .tech-tag {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
-  color: #93a1ab;
-  border: 1px solid #35414a;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
   padding: 4px 8px;
-  background: #1d262d;
+  background: var(--color-surface-dark);
+  transition: all 0.2s;
+}
+
+.tech-tag:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 /* Compétences */
@@ -401,7 +428,7 @@ section {
 .skill-category h3 {
   font-size: 14px;
   font-weight: 600;
-  color: #5b9bd5;
+  color: var(--color-primary);
   margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -416,16 +443,16 @@ section {
 
 .skill-tag {
   font-size: 13px;
-  color: #93a1ab;
-  border: 1px solid #35414a;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
   padding: 8px 14px;
-  background: #212b33;
+  background: var(--color-surface);
   transition: all 0.2s;
 }
 
 .skill-tag:hover {
-  border-color: #5b9bd5;
-  color: #5b9bd5;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* Certificats */
@@ -436,17 +463,17 @@ section {
 }
 
 .cert-card {
-  background: #212b33;
-  border: 1px solid #35414a;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   padding: 20px;
   border-radius: 4px;
-  border-left: 3px solid #5b9bd5;
+  border-left: 3px solid var(--color-primary);
 }
 
 .cert-issuer {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 8px;
@@ -455,13 +482,13 @@ section {
 .cert-name {
   font-size: 15px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin-bottom: 4px;
 }
 
 .cert-date {
   font-size: 12px;
-  color: #93a1ab;
+  color: var(--color-muted);
 }
 
 /* Langues */
@@ -479,27 +506,27 @@ section {
 .language-name {
   font-size: 14px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin-bottom: 8px;
 }
 
 .language-bar {
   height: 4px;
-  background: #2a343c;
+  background: var(--color-border-soft);
   border-radius: 2px;
   overflow: hidden;
 }
 
 .language-fill {
   height: 100%;
-  background: #5b9bd5;
+  background: var(--color-primary);
   transition: width 0.6s ease-out;
 }
 
 /* Formation */
 .edu {
   padding-bottom: 16px;
-  border-bottom: 1px solid #2a343c;
+  border-bottom: 1px solid var(--color-border-soft);
   margin-bottom: 24px;
 }
 
@@ -511,20 +538,20 @@ section {
 .edu-title {
   font-size: 15px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin-bottom: 4px;
 }
 
 .edu-org {
   font-size: 13px;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   font-family: 'IBM Plex Mono', monospace;
   margin-bottom: 2px;
 }
 
 .edu-date {
   font-size: 12px;
-  color: #93a1ab;
+  color: var(--color-muted);
 }
 
 /* Soft Skills */
@@ -536,12 +563,12 @@ section {
 
 .soft-skill {
   padding: 12px;
-  background: #212b33;
-  border: 1px solid #35414a;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   text-align: center;
   font-size: 14px;
-  color: #93a1ab;
+  color: var(--color-muted);
 }
 
 /* Intérêts */
@@ -553,9 +580,9 @@ section {
 
 .interest-tag {
   font-size: 14px;
-  color: #eef1f3;
-  background: #212b33;
-  border: 1px solid #5b9bd5;
+  color: var(--color-foreground);
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary);
   padding: 10px 16px;
   border-radius: 4px;
 }
@@ -564,20 +591,20 @@ section {
 .contact-section {
   text-align: center;
   padding-top: 40px;
-  border-top: 1px solid #35414a;
+  border-top: 1px solid var(--color-border);
 }
 
 .contact-title {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin-bottom: 12px;
 }
 
 .contact-desc {
   font-size: 15px;
-  color: #93a1ab;
+  color: var(--color-muted);
   margin-bottom: 32px;
   max-width: 50ch;
   margin-left: auto;
@@ -595,10 +622,10 @@ section {
 footer {
   text-align: center;
   padding: 40px 28px;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   font-size: 12px;
   font-family: 'IBM Plex Mono', monospace;
-  border-top: 1px solid #35414a;
+  border-top: 1px solid var(--color-border);
   margin-top: 40px;
 }
 
@@ -627,8 +654,8 @@ footer {
 }
 
 .modal-content {
-  background: #212b33;
-  border: 1px solid #35414a;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   padding: 40px;
   border-radius: 4px;
   width: 90%;
@@ -653,21 +680,21 @@ footer {
   align-items: center;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #35414a;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .modal-title {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 600;
-  color: #eef1f3;
+  color: var(--color-foreground);
   margin: 0;
 }
 
 .modal-close {
   font-size: 28px;
   font-weight: bold;
-  color: #93a1ab;
+  color: var(--color-muted);
   cursor: pointer;
   transition: color 0.2s;
   border: none;
@@ -681,7 +708,7 @@ footer {
 }
 
 .modal-close:hover {
-  color: #5b9bd5;
+  color: var(--color-primary);
 }
 
 .form-group {
@@ -691,7 +718,7 @@ footer {
 .form-group label {
   display: block;
   font-size: 13px;
-  color: #5f6d76;
+  color: var(--color-muted-dim);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 8px;
@@ -702,9 +729,9 @@ footer {
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  background: #1d262d;
-  border: 1px solid #35414a;
-  color: #eef1f3;
+  background: var(--color-surface-dark);
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 14px;
   border-radius: 4px;
@@ -714,7 +741,7 @@ footer {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #5b9bd5;
+  border-color: var(--color-primary);
 }
 
 .form-group textarea {
@@ -740,24 +767,24 @@ footer {
 }
 
 .btn-submit {
-  background: #5b9bd5;
-  color: #0f1418;
-  border-color: #5b9bd5;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
 }
 
 .btn-submit:hover {
-  background: #71aade;
+  background: var(--color-primary-hover);
 }
 
 .btn-cancel {
   background: transparent;
-  color: #93a1ab;
-  border-color: #35414a;
+  color: var(--color-muted);
+  border-color: var(--color-border);
 }
 
 .btn-cancel:hover {
-  border-color: #5b9bd5;
-  color: #5b9bd5;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .form-message {
@@ -770,15 +797,15 @@ footer {
 
 .form-message.success {
   background: rgba(111, 191, 122, 0.1);
-  color: #6fbf7a;
-  border: 1px solid #6fbf7a;
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
   display: block;
 }
 
 .form-message.error {
   background: rgba(239, 68, 68, 0.1);
-  color: #ef4444;
-  border: 1px solid #ef4444;
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
   display: block;
 }
 
