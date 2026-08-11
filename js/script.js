@@ -81,3 +81,51 @@ function handleContactForm(event) {
     submitBtn.textContent = 'Envoyer';
   });
 }
+// ==========================================
+// LANGUAGE DROPDOWN
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const selector =
+        document.querySelector(".language-selector");
+
+    const current =
+        document.getElementById("languageCurrent");
+
+    const options =
+        document.getElementById("languageOptions");
+
+    if (!selector || !current || !options) {
+        return;
+    }
+
+    // Open / close
+    current.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        selector.classList.toggle("open");
+    });
+
+    // Select language
+    options.querySelectorAll("button").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            setLanguage(button.dataset.lang);
+        });
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", () => {
+
+        selector.classList.remove("open");
+    });
+
+    // Load saved language
+    const savedLanguage =
+        localStorage.getItem("selectedLanguage") || "fr";
+
+    setLanguage(savedLanguage);
+});
