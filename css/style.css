@@ -176,6 +176,14 @@ nav {
 .language-options button.active {
     color: var(--color-primary);
 }
+.language-options {
+    display: none;
+}
+
+.language-selector.open .language-options {
+    display: flex;
+    flex-direction: column;
+}
 /* Hero Section */
 .hero {
   padding: 80px 0 112px;
