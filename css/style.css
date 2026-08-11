@@ -617,6 +617,25 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
+.contact-logo {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-logo img {
+  width: 320px;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  opacity: 0.95;
+}
+@media (max-width: 600px) {
+  .contact-logo img {
+    width: 260px;
+    max-width: 85%;
+  }
+}
 
 /* Footer */
 footer {
@@ -629,13 +648,6 @@ footer {
   margin-top: 40px;
 }
 
-.footer-logo {
-  height: 72px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0 auto 20px;
-}
 
 /* Modal */
 .modal {
