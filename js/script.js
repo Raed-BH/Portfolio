@@ -1,4 +1,33 @@
 // ==========================================
+// LANGUAGE SELECTION (sauvegarde uniquement, sans traduction)
+// ==========================================
+function setLanguage(lang) {
+    // 1. Sauvegarder le choix pour la prochaine visite
+    localStorage.setItem("selectedLanguage", lang);
+
+    // 2. Mettre à jour le texte du bouton affiché (ex: "FR" -> "EN")
+    const current = document.getElementById("languageCurrent");
+    if (current) {
+        current.textContent = lang.toUpperCase();
+    }
+
+    // 3. Marquer visuellement l'option active dans le menu déroulant
+    const options = document.getElementById("languageOptions");
+    if (options) {
+        options.querySelectorAll("button").forEach(btn => {
+            btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+    }
+
+    // 4. Fermer le menu après sélection
+    const selector = document.querySelector(".language-selector");
+    if (selector) {
+        selector.classList.remove("open");
+    }
+
+    // 5. Mettre à jour l'attribut lang du document (bon pour le SEO/accessibilité)
+    document.documentElement.lang = lang;
+}// ==========================================
 // LANGUAGE DROPDOWN
 // ==========================================
 
