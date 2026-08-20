@@ -1,3 +1,107 @@
+
+Claude a terminé la réponse.
+Voici exactement ce qu'il faut modifier, en 3 parties.
+
+1. Dans le CSS — remplacer l'animation actuelle
+Ton CSS a ça sur section :
+
+css
+section {
+  padding: 10px 0;
+  animation: fadeInUp 0.6s ease-out;
+}
+Le problème : cette animation se joue une seule fois au chargement de la page, donc si une section est plus bas, elle est déjà "arrivée" avant même que tu scrolles jusqu'à elle. Il faut la remplacer par un système contrôlé en JS.
+
+Supprime la ligne animation: fadeInUp 0.6s ease-out; de section, et ajoute ceci à la place (n'importe où dans le fichier, par exemple juste après .section-line) :
+
+css
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Décalage progressif pour les éléments en grille (cartes) */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+Tu peux garder @keyframes fadeInUp dans le fichier ou la supprimer, elle ne servira plus.
+
+2. Dans le HTML — ajouter la classe reveal
+Ajoute class="reveal" sur chaque <section> et sur les cartes que tu veux animer en cascade (class="reveal-item" sur .project-card, .cert-card, .job, etc.) :
+
+html
+<section id="profil" class="reveal">
+html
+<div class="project-card reveal-item">
+3. Dans le JS — l'observer qui déclenche l'animation
+Ajoute ce bloc dans script.js (par exemple dans le DOMContentLoaded existant, ou dans un nouveau) :
+
+javascript
+document.addEventListener("DOMContentLoaded", () => {
+  const revealEls = document.querySelectorAll(".reveal, .reveal-item");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // ne se joue qu'une fois
+      }
+    });
+  }, {
+    threshold: 0.15 // se déclenche quand 15% de l'élément est visible
+  });
+
+  revealEls.forEach(el => observer.observe(el));
+});
+Veux-tu que je te renvoie le code complet (HTML + CSS + JS) avec ces modifications déjà appliquées partout, ou tu préfères le faire toi-même à partir de ces indications ?
+
+oui
+
+
+24 fichiers modifiés, a consulté 2 fichiers, a exécuté une commande · 4 notes
+24 fichiers modifiés, a consulté 2 fichiers, a exécuté une commande · 4 notes
+Voilà les 3 fichiers complets. Récapitulatif des changements :
+
+index.html : class="reveal" sur chaque <section>, class="reveal-item" sur les cartes projets/certificats et les blocs d'expérience (pour un effet de cascade), et les barres de langue passent de style="width: X%" à data-width="X" (nécessaire pour que le JS puisse animer leur remplissage au scroll).
+style.css : l'ancien animation: fadeInUp (jouée une seule fois au chargement) est retirée de section, remplacée par les classes .reveal / .reveal-item pilotées par JS. J'ai aussi ajouté une règle prefers-reduced-motion par accessibilité, et un léger box-shadow au survol des cartes pour renforcer l'effet.
+script.js : nouveau bloc avec IntersectionObserver qui ajoute .active quand un élément entre dans l'écran, et anime en bonus les barres de langue à ce moment-là.
+Remplace tes 3 fichiers actuels par ceux-ci (garde bien style.css dans ton dossier css/). Teste en rechargeant la page et en scrollant lentement — chaque section et chaque carte devrait apparaître en fondu avec un léger décalage vers le haut.
+
+
+Index
+Code · HTML 
+
+Style
+Code · CSS 
+
+Script
+JS 
+
+
+Souhaitez-vous être averti lorsque Claude répond ?
+
+
+
+
+
+Claude est une IA et peut faire des erreurs. Veuillez vérifier les réponses.
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +114,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+ 
 <!-- Header -->
 <header>
   <div class="container">
@@ -39,7 +143,7 @@
     </nav>
   </div>
 </header>
-
+ 
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
@@ -49,14 +153,14 @@
       <div class="status-dot"></div>
       <span class="status-text" data-i18n="hero.status">Disponible</span>
     </div>
-
+ 
     <h1>Raed Ben Hmida</h1>
     <p class="title" data-i18n="hero.subtitle">Technicien en Maintenance & Développement</p>
-
+ 
     <p class="description" data-i18n="hero.description">
       Technicien maintenance CNC avec expertise en diagnostic de pannes critiques sur systèmes FANUC, Mitsubishi, Mazatrol, Siemens et HeidenHain. Intervient régulièrement aux côtés des équipes support des fabricants (Mazak, DMG Mori, Trumpf) pour résoudre des défaillances complexes. Combine maintenance industrielle, usinage de précision aéronautique et développement logiciel pour l'Industrie 4.0.
     </p>
-
+ 
     <div class="facts">
       <div class="fact">
         <span class="fact-label" data-i18n="hero.fact.location.label">Localisation</span>
@@ -75,22 +179,22 @@
         <span class="fact-value">+216 54 604 903</span>
       </div>
     </div>
-
+ 
     <div class="cta-group">
       <a href="cv/Raed_Ben_Hmida_CV.pdf" class="btn btn-primary" data-i18n="hero.cta.download" download>↓ Télécharger CV (PDF)</a>
       <button onclick="openContactModal()" class="btn btn-secondary" data-i18n="hero.cta.email" style="border: none; background: transparent; color: #93a1ab; cursor: pointer;">✉ Contacter par e-mail</button>
     </div>
   </div>
 </section>
-
+ 
 <!-- Profil Section -->
-<section id="profil">
+<section id="profil" class="reveal">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title" data-i18n="section.profil">Profil</h2>
       <div class="section-line"></div>
     </div>
-
+ 
     <div class="profil-text">
       <p>
         <strong data-i18n="profil.specialty.label">Spécialité :</strong> <span data-i18n="profil.specialty.text">Diagnostic et résolution de pannes critiques sur systèmes CNC FANUC, Mitsubishi, Mazatrol, Siemens et HeidenHain. Intervient régulièrement aux côtés des équipes support des fabricants mondiaux pour résoudre des défaillances complexes que les techniciens standards ne trouvent pas. Titulaire d'une licence en technologie de l'informatique, spécialisé en systèmes embarqués.</span>
@@ -104,16 +208,16 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- Experience Section -->
-<section id="experience">
+<section id="experience" class="reveal">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title" data-i18n="section.experience">Expérience</h2>
       <div class="section-line"></div>
     </div>
-
-    <div class="job">
+ 
+    <div class="job reveal-item">
       <div class="job-date">Août 2024 — Présent</div>
       <div>
         <h3 class="job-title" data-i18n="job1.title">Technicien de Maintenance Corrective</h3>
@@ -130,8 +234,8 @@
         </ul>
       </div>
     </div>
-
-    <div class="job">
+ 
+    <div class="job reveal-item">
       <div class="job-date">Nov. 2023 — Juil. 2024</div>
       <div>
         <h3 class="job-title" data-i18n="job2.title">Technicien Maintenance & Usinage</h3>
@@ -148,8 +252,8 @@
         </ul>
       </div>
     </div>
-
-    <div class="job">
+ 
+    <div class="job reveal-item">
       <div class="job-date">Fév. 2023 — Juin 2023</div>
       <div>
         <h3 class="job-title" data-i18n="job3.title">Stagiaire — Projet de Fin d'Études</h3>
@@ -163,8 +267,8 @@
         </ul>
       </div>
     </div>
-
-    <div class="job">
+ 
+    <div class="job reveal-item">
       <div class="job-date">Août 2022 — Sept. 2022</div>
       <div>
         <h3 class="job-title" data-i18n="job4.title">Stagiaire Développement Web</h3>
@@ -180,17 +284,17 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- Projets Section -->
-<section id="projets">
+<section id="projets" class="reveal">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title" data-i18n="section.projets">Projets</h2>
       <div class="section-line"></div>
     </div>
-
+ 
     <div class="projects-grid">
-      <div class="project-card">
+      <div class="project-card reveal-item">
         <p class="project-date" data-i18n="project1.date">2024 — Projet Académique Personnel</p>
         <h3 class="project-title" data-i18n="project1.title">Drone Agricole de Désherbage — IA & Laser</h3>
         <p class="project-desc" data-i18n="project1.desc">
@@ -205,8 +309,8 @@
           <span class="tech-tag">Systèmes Embarqués</span>
         </div>
       </div>
-
-      <div class="project-card">
+ 
+      <div class="project-card reveal-item">
         <p class="project-date" data-i18n="project2.date">2023 — Projet de fin d'études</p>
         <h3 class="project-title" data-i18n="project2.title">Plateforme de Gestion des Voyages</h3>
         <p class="project-desc" data-i18n="project2.desc">
@@ -220,8 +324,8 @@
           <span class="tech-tag">Real-time</span>
         </div>
       </div>
-
-      <div class="project-card">
+ 
+      <div class="project-card reveal-item">
         <p class="project-date" data-i18n="project3.date">2022 — Stage BECREATIVE</p>
         <h3 class="project-title" data-i18n="project3.title">Conception Web & Design</h3>
         <p class="project-desc" data-i18n="project3.desc">
@@ -238,15 +342,15 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- Compétences Section -->
-<section id="competences">
+<section id="competences" class="reveal">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title" data-i18n="section.competences">Compétences</h2>
       <div class="section-line"></div>
     </div>
-
+ 
     <div class="skills-grid">
       <div class="skill-category">
         <h3 data-i18n="skills.cnc.title">Compétences CNC & Industriel</h3>
@@ -266,7 +370,7 @@
           <span class="skill-tag">Installation & Mise en service</span>
         </div>
       </div>
-
+ 
       <div class="skill-category">
         <h3 data-i18n="skills.web.title">Développement Web</h3>
         <div class="skill-tags">
@@ -279,7 +383,7 @@
           <span class="skill-tag">Responsive Design</span>
         </div>
       </div>
-
+ 
       <div class="skill-category">
         <h3 data-i18n="skills.mobile.title">Développement Mobile</h3>
         <div class="skill-tags">
@@ -290,7 +394,7 @@
           <span class="skill-tag">Java</span>
         </div>
       </div>
-
+ 
       <div class="skill-category">
         <h3 data-i18n="skills.data.title">Gestion de Données & Frameworks</h3>
         <div class="skill-tags">
@@ -302,7 +406,7 @@
           <span class="skill-tag"><a href="https://gtfs.org" target="_blank" rel="noopener">GTFS</a> (General transit feed specification)</span>
         </div>
       </div>
-
+ 
       <div class="skill-category">
         <h3 data-i18n="skills.lang.title">Langages de Programmation</h3>
         <div class="skill-tags">
@@ -314,7 +418,7 @@
           <span class="skill-tag">PHP</span>
         </div>
       </div>
-
+ 
       <div class="skill-category">
         <h3 data-i18n="skills.embedded.title">Systèmes Embarqués & IA</h3>
         <div class="skill-tags">
@@ -330,7 +434,7 @@
           <span class="skill-tag">Robotique</span>
         </div>
       </div>
-
+ 
       <div class="skill-category">
         <h3 data-i18n="skills.os.title">Systèmes d'Exploitation</h3>
         <div class="skill-tags">
@@ -340,7 +444,7 @@
         </div>
       </div>
     </div>
-
+ 
     <!-- Compétences Transversales -->
     <div style="margin-top: 48px;">
       <h3 data-i18n="softskills.title" style="font-size: 14px; font-weight: 600; color: #5b9bd5; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'IBM Plex Mono', monospace;">Compétences Transversales</h3>
@@ -355,7 +459,7 @@
         <div class="soft-skill" data-i18n="softskill.8">Gestion de Projets</div>
       </div>
     </div>
-
+ 
     <!-- Centres d'Intérêt -->
     <div style="margin-top: 48px;">
       <h3 data-i18n="interests.title" style="font-size: 14px; font-weight: 600; color: #5b9bd5; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'IBM Plex Mono', monospace;">Centres d'Intérêt & Vision</h3>
@@ -370,7 +474,7 @@
         <span class="interest-tag">Industrie 4.0</span>
       </div>
     </div>
-
+ 
     <!-- Langues -->
     <div style="margin-top: 48px;">
       <h3 data-i18n="languages.title" style="font-size: 14px; font-weight: 600; color: #5b9bd5; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'IBM Plex Mono', monospace;">Langues</h3>
@@ -378,66 +482,66 @@
         <div class="language">
           <span class="language-name" data-i18n="lang.arabic">Arabe</span>
           <div class="language-bar">
-            <div class="language-fill" style="width: 100%;"></div>
+            <div class="language-fill" data-width="100"></div>
           </div>
         </div>
         <div class="language">
           <span class="language-name" data-i18n="lang.french">Français</span>
           <div class="language-bar">
-            <div class="language-fill" style="width: 90%;"></div>
+            <div class="language-fill" data-width="90"></div>
           </div>
         </div>
         <div class="language">
           <span class="language-name" data-i18n="lang.english">Anglais</span>
           <div class="language-bar">
-            <div class="language-fill" style="width: 75%;"></div>
+            <div class="language-fill" data-width="75"></div>
           </div>
         </div>
         <div class="language">
           <span class="language-name" data-i18n="lang.german">Allemand</span>
           <div class="language-bar">
-            <div class="language-fill" style="width: 40%;"></div>
+            <div class="language-fill" data-width="40"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- Certificats Section -->
-<section id="certificats">
+<section id="certificats" class="reveal">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title" data-i18n="section.certificats">Certificats & Habilitations</h2>
       <div class="section-line"></div>
     </div>
-
+ 
     <div class="certs-grid">
-      <div class="cert-card">
+      <div class="cert-card reveal-item">
         <p class="cert-issuer" data-i18n="cert1.issuer">Certification Professionnelle</p>
         <h3 class="cert-name" data-i18n="cert1.name">Habilitation Électrique</h3>
         <p class="cert-date">Juillet 2026</p>
       </div>
-
-      <div class="cert-card">
+ 
+      <div class="cert-card reveal-item">
         <p class="cert-issuer">Cisco</p>
         <h3 class="cert-name" data-i18n="cert2.name">Introduction IoT(Internet Of Things)</h3>
         <p class="cert-date">2022</p>
       </div>
-
-      <div class="cert-card">
+ 
+      <div class="cert-card reveal-item">
         <p class="cert-issuer">Orange Tunisie</p>
         <h3 class="cert-name" data-i18n="cert3.name">Introduction à la Fabrication Numérique</h3>
         <p class="cert-date">2022</p>
       </div>
-
-      <div class="cert-card">
+ 
+      <div class="cert-card reveal-item">
         <p class="cert-issuer">Google Club ESSTHS</p>
         <h3 class="cert-name" data-i18n="cert4.name">Participation à l'Atelier IA(Intelligence Artificielle)</h3>
         <p class="cert-date">2021</p>
       </div>
-
-      <div class="cert-card">
+ 
+      <div class="cert-card reveal-item">
         <p class="cert-issuer">Microsoft</p>
         <h3 class="cert-name" data-i18n="cert5.name">Microsoft Office Specialist</h3>
         <p class="cert-date">2021</p>
@@ -445,22 +549,22 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- Formation Section -->
-<section id="formation">
+<section id="formation" class="reveal">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title" data-i18n="section.formation">Formation</h2>
       <div class="section-line"></div>
     </div>
-
+ 
     <div class="edu">
       <h3 class="edu-title" data-i18n="edu1.title">Licence Appliquée en Technologie de l'Informatique</h3>
       <p class="edu-org" data-i18n="edu1.org">Institut Supérieur des Études Technologiques, Kairouan, Tunisie</p>
       <p class="edu-date">Septembre 2020 — Juin 2023</p>
       <p style="font-size: 13px; color: #93a1ab; margin-top: 8px;"><strong data-i18n="edu1.spec.label">Spécialisation :</strong> <span data-i18n="edu1.spec.text">Systèmes Embarqués & Développement Mobile</span></p>
     </div>
-
+ 
     <div class="edu">
       <h3 class="edu-title" data-i18n="edu2.title">Baccalauréat Sciences Techniques</h3>
       <p class="edu-org" data-i18n="edu2.org">Lycée Jemmel, Tunisie</p>
@@ -468,30 +572,30 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- Contact Section -->
-<section id="contact">
+<section id="contact" class="reveal">
   <div class="container">
     <div class="contact-section">
-
+ 
       <h2 class="contact-title" data-i18n="section.contact">Travaillons Ensemble</h2>
-
+ 
       <p class="contact-desc" data-i18n="contact.desc">
         Vous avez un projet, une opportunité ou une question ?
         N'hésitez pas à me contacter. Je suis toujours intéressé
         par de nouveaux défis et opportunités.
       </p>
-
+ 
       <div class="contact-links">
         <button onclick="openContactModal()" class="btn btn-primary" data-i18n="contact.cta.message">
           ✉ Envoyer un message
         </button>
-
+ 
         <a href="tel:+21654604903" class="btn btn-secondary">
           📞 +216 54 604 903
         </a>
       </div>
-
+ 
       <!-- Logo -->
       <div class="contact-logo">
         <img
@@ -499,16 +603,16 @@
           alt="RBH — Raed Ben Hmida"
         >
       </div>
-
+ 
     </div>
   </div>
 </section>
-
+ 
 <!-- Footer -->
 <footer>
   <p>© 2026 Raed Ben Hmida. Tous droits réservés.</p>
 </footer>
-
+ 
 <!-- Contact Modal -->
 <div id="contactModal" class="modal">
   <div class="modal-content">
@@ -547,8 +651,9 @@
     </form>
   </div>
 </div>
-
+ 
 <script src="js/script.js"></script>
-
+ 
 </body>
 </html>
+ 
