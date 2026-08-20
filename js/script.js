@@ -399,6 +399,13 @@ function setLanguage(lang) {
 document.addEventListener("DOMContentLoaded", () => {
     const revealEls = document.querySelectorAll(".reveal, .reveal-item");
 
+    // Filet de sécurité : si le navigateur ne supporte pas IntersectionObserver,
+    // on affiche tout de suite tout le contenu (jamais de page vide).
+    if (!("IntersectionObserver" in window)) {
+        revealEls.forEach(el => el.classList.add("active"));
+        return;
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -416,7 +423,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, {
-        threshold: 0.15 // se déclenche quand 15% de l'élément est visible
+        threshold: 0,               // se déclenche dès qu'un seul pixel est visible
+        rootMargin: "0px 0px -80px 0px" // se déclenche un peu avant que l'élément touche le bas de l'écran
     });
 
     revealEls.forEach(el => observer.observe(el));
@@ -470,9 +478,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setLanguage(savedLanguage);
 });
-// ==========================================
 // Modal Functions
-// ==========================================
 function openContactModal() {
   document.getElementById('contactModal').classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -485,18 +491,16 @@ function closeContactModal() {
   document.getElementById('formMessage').className = 'form-message';
   document.body.style.overflow = 'auto';
 }
-// ==========================================
+
 // Close modal when clicking outside
-// ==========================================
 window.onclick = function(event) {
   const modal = document.getElementById('contactModal');
   if (event.target === modal) {
     closeContactModal();
   }
 }
-// ==========================================
+
 // Handle form submission with Formspree
-// ==========================================
 function handleContactForm(event) {
   event.preventDefault();
   
@@ -507,22 +511,18 @@ function handleContactForm(event) {
   const formMessage = document.getElementById('formMessage');
   const submitBtn = event.target.querySelector('.btn-submit');
   
-  // ==========================================
   // Validate form
-  // ==========================================
   if (!name || !email || !subject || !message) {
     formMessage.textContent = 'Veuillez remplir tous les champs.';
     formMessage.className = 'form-message error';
     return;
   }
-  // ==========================================
+  
   // Disable submit button
-  // ==========================================
   submitBtn.disabled = true;
   submitBtn.textContent = 'Envoi en cours...';
-  // ==========================================
+  
   // Send email using Formspree
-  // ==========================================
   fetch('https://formspree.io/f/mnjekgge', {
     method: 'POST',
     headers: {
@@ -543,6 +543,7 @@ function handleContactForm(event) {
       document.getElementById('contactForm').reset();
       submitBtn.disabled = false;
       submitBtn.textContent = 'Envoyer';
+      
       // Close modal after 3 seconds
       setTimeout(() => {
         closeContactModal();
