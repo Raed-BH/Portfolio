@@ -10,7 +10,7 @@ const translations = {
     "nav.certificats": "Certificats",
     "nav.formation": "Formation",
     "nav.contact": "Contact",
- 
+
     "hero.status": "Disponible",
     "hero.subtitle": "Technicien en Maintenance & Développement",
     "hero.description": "Technicien maintenance CNC avec expertise en diagnostic de pannes critiques sur systèmes FANUC, Mitsubishi, Mazatrol, Siemens et HeidenHain. Intervient régulièrement aux côtés des équipes support des fabricants (Mazak, DMG Mori, Trumpf) pour résoudre des défaillances complexes. Combine maintenance industrielle, usinage de précision aéronautique et développement logiciel pour l'Industrie 4.0.",
@@ -23,7 +23,7 @@ const translations = {
     "hero.fact.contact.label": "Contact",
     "hero.cta.download": "↓ Télécharger CV (PDF)",
     "hero.cta.email": "✉ Contacter par e-mail",
- 
+
     "section.profil": "Profil",
     "section.experience": "Expérience",
     "section.projets": "Projets",
@@ -31,14 +31,14 @@ const translations = {
     "section.certificats": "Certificats & Habilitations",
     "section.formation": "Formation",
     "section.contact": "Travaillons Ensemble",
- 
+
     "profil.specialty.label": "Spécialité :",
     "profil.specialty.text": "Diagnostic et résolution de pannes critiques sur systèmes CNC FANUC, Mitsubishi, Mazatrol, Siemens et HeidenHain. Intervient régulièrement aux côtés des équipes support des fabricants mondiaux pour résoudre des défaillances complexes que les techniciens standards ne trouvent pas. Titulaire d'une licence en technologie de l'informatique, spécialisé en systèmes embarqués.",
     "profil.approach.label": "Approche Unique :",
     "profil.approach.text": "Combine trois domaines d'expertise :(1) Maintenance industrielle avancée — diagnostic électrique/électronique/mécanique/pneumatique/hydraulique ;(2-) Usinage de précision aéronautique — tolérances strictes, métrologie, collaboration méthodes ;(3) Développement logiciel — Python, Django, Flutter, intégration matériel-logiciel, IA/robotique. Capable de passer du diagnostic matériel à la programmation embarquée sans interruption.",
     "profil.machines.label": "Machines & Systèmes :",
     "profil.machines.text": "Expérience directe sur tours CNC, centres d'usinage, presses, plieuses, embarreurs automatiques. Marques : Mazak, Star, Citizen, Miyano, Biglia, Hurco, HartFord, Mori Seiki, Trumpf, DMG Mori. Systèmes embarqués : Arduino, Raspberry Pi, microcontrôleurs, RTOS. Bases de données : SQL, PostgreSQL, MySQL.",
- 
+
     "job1.title": "Technicien de Maintenance Corrective",
     "job1.context": "Multi-clients | Diagnostic de pannes critiques",
     "job1.date": "Août 2024 — Présent",
@@ -49,7 +49,7 @@ const translations = {
     "job1.li5": "<strong>Remplacement, réglage et validation de composants</strong> : variateurs, servomoteurs, capteurs, cartes électroniques, alimentations, organes mécaniques.",
     "job1.li6": "Manutention et installation de nouvelles machines, mise en service complète, essais de remise en service.",
     "job1.li7": "Suivi des interventions et participation à l'amélioration de la fiabilité des équipements.",
- 
+
     "job2.title": "Technicien Maintenance & Usinage",
     "job2.context": "Sous-traitance aéronautique ISO 9001 | Environnement haute précision",
     "job2.date": "Nov. 2023 — Juil. 2024",
@@ -60,7 +60,7 @@ const translations = {
     "job2.li5": "Diagnostic multi-domaines : électrique, électronique, mécanique, pneumatique, hydraulique.",
     "job2.li6": "Optimisation des processus pour réduire les temps d'arrêt et améliorer la fiabilité des équipements.",
     "job2.li7": "Documentation complète de toutes les interventions et réparations effectuées.",
- 
+
     "job3.title": "Stagiaire — Projet de Fin d'Études",
     "job3.context": "Développement full-stack | App mobile + Web | Transport public",
     "job3.date": "Fév. 2023 — Juin 2023",
@@ -68,7 +68,7 @@ const translations = {
     "job3.li2": "Conception et développement d'interfaces utilisateur pour suivi en temps réel des bus et consultation des horaires.",
     "job3.li3": "Intégration du standard <a href=\"https://gtfs.org\" target=\"_blank\" rel=\"noopener\">GTFS</a> (General transit feed specification) pour gestion des données de transport public et utilisation de PostgreSQL pour stockage des données.",
     "job3.li4": "Analyse des besoins, développement des fonctionnalités, phases de test et optimisation de performance.",
- 
+
     "job4.title": "Stagiaire Développement Web",
     "job4.context": "Design & Intégration web | Agence créative",
     "job4.date": "Août 2022 — Sept. 2022",
@@ -76,7 +76,7 @@ const translations = {
     "job4.li2": "Intégration de maquettes en sites web responsives avec technologies front-end (HTML5, CSS3, Bootstrap).",
     "job4.li3": "Développement et administration de sites web, incluant création d'interfaces d'administration conviviales.",
     "job4.li4": "Collaboration avec l'équipe de développement pour assurer qualité, ergonomie et performances.",
- 
+
     "project1.date": "2024 — Projet Académique Personnel",
     "project1.title": "Drone Agricole de Désherbage — IA & Laser",
     "project1.desc": "Conception d'un modèle de drone adapté à l'agriculture, utilisant l'intelligence artificielle pour détecter et éliminer les mauvaises herbes au laser. Travail sur systèmes automatisés orientés robotique, combinant IA, capteurs et actionneurs.",
@@ -86,7 +86,7 @@ const translations = {
     "project3.date": "2022 — Stage BECREATIVE",
     "project3.title": "Conception Web & Design",
     "project3.desc": "Conception et développement de sites web responsives avec interfaces d'administration conviviales. Maquettes graphiques adaptées aux besoins des clients avec principes modernes de UI/UX.",
- 
+
     "skills.cnc.title": "Compétences CNC & Industriel",
     "skills.cnc.1": "Systèmes de commande numérique (FANUC, Mitsubishi, Mazatrol, Siemens, HeidenHain)",
     "skills.cnc.2": "Tours CNC",
@@ -113,13 +113,13 @@ const translations = {
     "skills.embedded.5": "IA & Machine Learning",
     "skills.embedded.6": "Robotique",
     "skills.os.title": "Systèmes d'Exploitation",
- 
+
     "project1.tech.1": "IA/Machine Learning",
     "project1.tech.2": "Robotique",
     "project1.tech.3": "Capteurs",
     "project1.tech.4": "Actionneurs",
     "project1.tech.5": "Systèmes Embarqués",
- 
+
     "interests.title": "Centres d'Intérêt & Vision",
     "interests.1": "Électronique",
     "interests.2": "Systèmes Embarqués",
@@ -127,9 +127,9 @@ const translations = {
     "interests.4": "Intelligence Artificielle",
     "interests.5": "Mécanique Automobile",
     "interests.6": "Robotique",
- 
+
     "footer.text": "© 2026 Raed Ben Hmida. Tous droits réservés.",
- 
+
     "softskills.title": "Compétences Transversales",
     "softskill.1": "Diagnostic Avancé",
     "softskill.2": "Résolution de Pannes Complexes",
@@ -139,21 +139,21 @@ const translations = {
     "softskill.6": "Travail en Équipe",
     "softskill.7": "Optimisation de Processus",
     "softskill.8": "Gestion de Projets",
- 
+
     "interests.title": "Centres d'Intérêt & Vision",
     "languages.title": "Langues",
     "lang.arabic": "Arabe",
     "lang.french": "Français",
     "lang.english": "Anglais",
     "lang.german": "Allemand",
- 
+
     "cert1.issuer": "Certification Professionnelle",
     "cert1.name": "Habilitation Électrique",
     "cert2.name": "Introduction IoT (Internet Of Things)",
     "cert3.name": "Introduction à la Fabrication Numérique",
     "cert4.name": "Participation à l'Atelier IA (Intelligence Artificielle)",
     "cert5.name": "Microsoft Office Specialist",
- 
+
     "edu1.title": "Licence Appliquée en Technologie de l'Informatique",
     "edu1.org": "Institut Supérieur des Études Technologiques, Kairouan, Tunisie",
     "edu1.date": "Septembre 2020 — Juin 2023",
@@ -161,12 +161,12 @@ const translations = {
     "edu1.spec.text": "Systèmes Embarqués & Développement Mobile",
     "edu2.title": "Baccalauréat Sciences Techniques",
     "edu2.org": "Lycée Jemmel, Tunisie",
- 
+
     "cert1.date": "Juillet 2026",
- 
+
     "contact.desc": "Vous avez un projet, une opportunité ou une question ? N'hésitez pas à me contacter. Je suis toujours intéressé par de nouveaux défis et opportunités.",
     "contact.cta.message": "✉ Envoyer un message",
- 
+
     "modal.title": "Envoyer un Message",
     "modal.label.name": "Nom Complet",
     "modal.placeholder.name": "Votre nom",
@@ -179,7 +179,7 @@ const translations = {
     "modal.btn.submit": "Envoyer",
     "modal.btn.cancel": "Annuler"
   },
- 
+
   en: {
     "nav.profil": "Profile",
     "nav.experience": "Experience",
@@ -188,7 +188,7 @@ const translations = {
     "nav.certificats": "Certificates",
     "nav.formation": "Education",
     "nav.contact": "Contact",
- 
+
     "hero.status": "Available",
     "hero.subtitle": "Maintenance Technician & Developer",
     "hero.description": "CNC maintenance technician with expertise in diagnosing critical failures on FANUC, Mitsubishi, Mazatrol, Siemens and HeidenHain systems. Works regularly alongside manufacturer support teams (Mazak, DMG Mori, Trumpf) to resolve complex failures. Combines industrial maintenance, aerospace precision machining and software development for Industry 4.0.",
@@ -201,7 +201,7 @@ const translations = {
     "hero.fact.contact.label": "Contact",
     "hero.cta.download": "↓ Download CV (PDF)",
     "hero.cta.email": "✉ Contact by email",
- 
+
     "section.profil": "Profile",
     "section.experience": "Experience",
     "section.projets": "Projects",
@@ -209,14 +209,14 @@ const translations = {
     "section.certificats": "Certificates & Qualifications",
     "section.formation": "Education",
     "section.contact": "Let's Work Together",
- 
+
     "profil.specialty.label": "Specialty:",
     "profil.specialty.text": "Diagnosing and resolving critical failures on FANUC, Mitsubishi, Mazatrol, Siemens and HeidenHain CNC systems. Works regularly alongside global manufacturer support teams to resolve complex failures that standard technicians can't find. Holds a bachelor's degree in computer technology, specialized in embedded systems.",
     "profil.approach.label": "Unique Approach:",
     "profil.approach.text": "Combines three areas of expertise: (1) Advanced industrial maintenance — electrical/electronic/mechanical/pneumatic/hydraulic diagnostics; (2) Aerospace precision machining — strict tolerances, metrology, methods collaboration; (3) Software development — Python, Django, Flutter, hardware-software integration, AI/robotics. Able to move seamlessly from hardware diagnostics to embedded programming.",
     "profil.machines.label": "Machines & Systems:",
     "profil.machines.text": "Hands-on experience with CNC lathes, machining centers, presses, bending machines, automatic bar feeders. Brands: Mazak, Star, Citizen, Miyano, Biglia, Hurco, HartFord, Mori Seiki, Trumpf, DMG Mori. Embedded systems: Arduino, Raspberry Pi, microcontrollers, RTOS. Databases: SQL, PostgreSQL, MySQL.",
- 
+
     "job1.title": "Corrective Maintenance Technician",
     "job1.context": "Multi-client | Critical failure diagnostics",
     "job1.date": "August 2024 — Present",
@@ -227,7 +227,7 @@ const translations = {
     "job1.li5": "<strong>Replacement, adjustment and validation of components</strong>: drives, servomotors, sensors, electronic boards, power supplies, mechanical parts.",
     "job1.li6": "Handling and installation of new machines, complete commissioning, and restart testing.",
     "job1.li7": "Follow-up on interventions and contribution to improving equipment reliability.",
- 
+
     "job2.title": "Maintenance & Machining Technician",
     "job2.context": "ISO 9001 aerospace subcontracting | High-precision environment",
     "job2.date": "November 2023 — July 2024",
@@ -238,7 +238,7 @@ const translations = {
     "job2.li5": "Multi-domain diagnostics: electrical, electronic, mechanical, pneumatic, hydraulic.",
     "job2.li6": "Process optimization to reduce downtime and improve equipment reliability.",
     "job2.li7": "Complete documentation of all interventions and repairs performed.",
- 
+
     "job3.title": "Intern — Final Year Project",
     "job3.context": "Full-stack development | Mobile + Web app | Public transport",
     "job3.date": "February 2023 — June 2023",
@@ -246,7 +246,7 @@ const translations = {
     "job3.li2": "Design and development of user interfaces for real-time bus tracking and schedule consultation.",
     "job3.li3": "Integration of the <a href=\"https://gtfs.org\" target=\"_blank\" rel=\"noopener\">GTFS</a> standard (General Transit Feed Specification) for managing public transport data, using PostgreSQL for data storage.",
     "job3.li4": "Requirements analysis, feature development, testing phases and performance optimization.",
- 
+
     "job4.title": "Web Development Intern",
     "job4.context": "Web design & integration | Creative agency",
     "job4.date": "August 2022 — September 2022",
@@ -254,7 +254,7 @@ const translations = {
     "job4.li2": "Integration of mockups into responsive websites using front-end technologies (HTML5, CSS3, Bootstrap).",
     "job4.li3": "Development and administration of websites, including creation of user-friendly admin interfaces.",
     "job4.li4": "Collaboration with the development team to ensure quality, usability and performance.",
- 
+
     "project1.date": "2024 — Personal Academic Project",
     "project1.title": "Agricultural Weeding Drone — AI & Laser",
     "project1.desc": "Design of a drone model adapted to agriculture, using artificial intelligence to detect and eliminate weeds with a laser. Work on robotics-oriented automated systems, combining AI, sensors and actuators.",
@@ -264,7 +264,7 @@ const translations = {
     "project3.date": "2022 — BECREATIVE Internship",
     "project3.title": "Web Design & Development",
     "project3.desc": "Design and development of responsive websites with user-friendly admin interfaces. Graphic mockups tailored to client needs following modern UI/UX principles.",
- 
+
     "skills.cnc.title": "CNC & Industrial Skills",
     "skills.cnc.1": "CNC control systems (FANUC, Mitsubishi, Mazatrol, Siemens, HeidenHain)",
     "skills.cnc.2": "CNC Lathes",
@@ -291,13 +291,13 @@ const translations = {
     "skills.embedded.5": "AI & Machine Learning",
     "skills.embedded.6": "Robotics",
     "skills.os.title": "Operating Systems",
- 
+
     "project1.tech.1": "AI/Machine Learning",
     "project1.tech.2": "Robotics",
     "project1.tech.3": "Sensors",
     "project1.tech.4": "Actuators",
     "project1.tech.5": "Embedded Systems",
- 
+
     "interests.title": "Interests & Vision",
     "interests.1": "Electronics",
     "interests.2": "Embedded Systems",
@@ -305,9 +305,9 @@ const translations = {
     "interests.4": "Artificial Intelligence",
     "interests.5": "Automotive Mechanics",
     "interests.6": "Robotics",
- 
+
     "footer.text": "© 2026 Raed Ben Hmida. All rights reserved.",
- 
+
     "softskills.title": "Soft Skills",
     "softskill.1": "Advanced Diagnostics",
     "softskill.2": "Complex Troubleshooting",
@@ -317,21 +317,21 @@ const translations = {
     "softskill.6": "Teamwork",
     "softskill.7": "Process Optimization",
     "softskill.8": "Project Management",
- 
+
     "interests.title": "Interests & Vision",
     "languages.title": "Languages",
     "lang.arabic": "Arabic",
     "lang.french": "French",
     "lang.english": "English",
     "lang.german": "German",
- 
+
     "cert1.issuer": "Professional Certification",
     "cert1.name": "Electrical Authorization",
     "cert2.name": "Introduction to IoT (Internet Of Things)",
     "cert3.name": "Introduction to Digital Manufacturing",
     "cert4.name": "AI (Artificial Intelligence) Workshop Participation",
     "cert5.name": "Microsoft Office Specialist",
- 
+
     "edu1.title": "Bachelor's Degree in Computer Technology",
     "edu1.org": "Higher Institute of Technological Studies, Kairouan, Tunisia",
     "edu1.date": "September 2020 — June 2023",
@@ -339,12 +339,12 @@ const translations = {
     "edu1.spec.text": "Embedded Systems & Mobile Development",
     "edu2.title": "Technical Sciences Baccalaureate",
     "edu2.org": "Lycée Jemmel, Tunisia",
- 
+
     "cert1.date": "July 2026",
- 
+
     "contact.desc": "Have a project, an opportunity or a question? Feel free to get in touch. I'm always interested in new challenges and opportunities.",
     "contact.cta.message": "✉ Send a message",
- 
+
     "modal.title": "Send a Message",
     "modal.label.name": "Full Name",
     "modal.placeholder.name": "Your name",
@@ -357,7 +357,7 @@ const translations = {
     "modal.btn.submit": "Send",
     "modal.btn.cancel": "Cancel"
   },
- 
+
   de: {
     "nav.profil": "Profil",
     "nav.experience": "Erfahrung",
@@ -366,7 +366,7 @@ const translations = {
     "nav.certificats": "Zertifikate",
     "nav.formation": "Ausbildung",
     "nav.contact": "Kontakt",
- 
+
     "hero.status": "Verfügbar",
     "hero.subtitle": "Wartungstechniker & Entwickler",
     "hero.description": "CNC-Wartungstechniker mit Expertise in der Diagnose kritischer Störungen an FANUC-, Mitsubishi-, Mazatrol-, Siemens- und HeidenHain-Systemen. Arbeitet regelmäßig mit den Support-Teams der Hersteller (Mazak, DMG Mori, Trumpf) zusammen, um komplexe Störungen zu beheben. Kombiniert industrielle Wartung, präzise Luftfahrtbearbeitung und Softwareentwicklung für Industrie 4.0.",
@@ -379,7 +379,7 @@ const translations = {
     "hero.fact.contact.label": "Kontakt",
     "hero.cta.download": "↓ Lebenslauf herunterladen (PDF)",
     "hero.cta.email": "✉ Per E-Mail kontaktieren",
- 
+
     "section.profil": "Profil",
     "section.experience": "Erfahrung",
     "section.projets": "Projekte",
@@ -387,14 +387,14 @@ const translations = {
     "section.certificats": "Zertifikate & Qualifikationen",
     "section.formation": "Ausbildung",
     "section.contact": "Lass uns zusammenarbeiten",
- 
+
     "profil.specialty.label": "Spezialität:",
     "profil.specialty.text": "Diagnose und Behebung kritischer Störungen an FANUC-, Mitsubishi-, Mazatrol-, Siemens- und HeidenHain-CNC-Systemen. Arbeitet regelmäßig mit globalen Hersteller-Support-Teams zusammen, um komplexe Störungen zu beheben, die Standardtechniker nicht finden. Bachelorabschluss in Informationstechnologie mit Spezialisierung auf eingebettete Systeme.",
     "profil.approach.label": "Einzigartiger Ansatz:",
     "profil.approach.text": "Kombiniert drei Fachgebiete: (1) Fortgeschrittene industrielle Wartung — elektrische/elektronische/mechanische/pneumatische/hydraulische Diagnose; (2) Präzise Luftfahrtbearbeitung — strenge Toleranzen, Metrologie, Methodenzusammenarbeit; (3) Softwareentwicklung — Python, Django, Flutter, Hardware-Software-Integration, KI/Robotik. Kann nahtlos von der Hardwarediagnose zur eingebetteten Programmierung wechseln.",
     "profil.machines.label": "Maschinen & Systeme:",
     "profil.machines.text": "Praktische Erfahrung mit CNC-Drehmaschinen, Bearbeitungszentren, Pressen, Biegemaschinen, automatischen Stangenzuführungen. Marken: Mazak, Star, Citizen, Miyano, Biglia, Hurco, HartFord, Mori Seiki, Trumpf, DMG Mori. Eingebettete Systeme: Arduino, Raspberry Pi, Mikrocontroller, RTOS. Datenbanken: SQL, PostgreSQL, MySQL.",
- 
+
     "job1.title": "Techniker für Instandsetzung",
     "job1.context": "Mehrere Kunden | Diagnose kritischer Störungen",
     "job1.date": "August 2024 — Heute",
@@ -405,7 +405,7 @@ const translations = {
     "job1.li5": "<strong>Austausch, Einstellung und Prüfung von Komponenten</strong>: Umrichter, Servomotoren, Sensoren, Elektronikplatinen, Netzteile, mechanische Bauteile.",
     "job1.li6": "Handhabung und Installation neuer Maschinen, vollständige Inbetriebnahme und Wiederinbetriebnahmetests.",
     "job1.li7": "Nachverfolgung der Einsätze und Mitwirkung an der Verbesserung der Anlagenzuverlässigkeit.",
- 
+
     "job2.title": "Wartungs- und Bearbeitungstechniker",
     "job2.context": "ISO 9001 Luftfahrt-Unterauftragnehmer | Hochpräzisionsumgebung",
     "job2.date": "November 2023 — Juli 2024",
@@ -416,7 +416,7 @@ const translations = {
     "job2.li5": "Multidisziplinäre Diagnose: elektrisch, elektronisch, mechanisch, pneumatisch, hydraulisch.",
     "job2.li6": "Prozessoptimierung zur Reduzierung von Ausfallzeiten und Verbesserung der Anlagenzuverlässigkeit.",
     "job2.li7": "Vollständige Dokumentation aller durchgeführten Einsätze und Reparaturen.",
- 
+
     "job3.title": "Praktikant — Abschlussprojekt",
     "job3.context": "Full-Stack-Entwicklung | Mobile + Web-App | Öffentlicher Verkehr",
     "job3.date": "Februar 2023 — Juni 2023",
@@ -424,7 +424,7 @@ const translations = {
     "job3.li2": "Entwurf und Entwicklung von Benutzeroberflächen für die Echtzeit-Busverfolgung und die Fahrplanabfrage.",
     "job3.li3": "Integration des <a href=\"https://gtfs.org\" target=\"_blank\" rel=\"noopener\">GTFS</a>-Standards (General Transit Feed Specification) zur Verwaltung von Nahverkehrsdaten, mit PostgreSQL zur Datenspeicherung.",
     "job3.li4": "Bedarfsanalyse, Funktionsentwicklung, Testphasen und Leistungsoptimierung.",
- 
+
     "job4.title": "Praktikant Webentwicklung",
     "job4.context": "Webdesign & Integration | Kreativagentur",
     "job4.date": "August 2022 — September 2022",
@@ -432,7 +432,7 @@ const translations = {
     "job4.li2": "Umsetzung von Entwürfen in responsive Websites mit Frontend-Technologien (HTML5, CSS3, Bootstrap).",
     "job4.li3": "Entwicklung und Verwaltung von Websites, einschließlich der Erstellung benutzerfreundlicher Admin-Oberflächen.",
     "job4.li4": "Zusammenarbeit mit dem Entwicklungsteam zur Sicherstellung von Qualität, Benutzerfreundlichkeit und Leistung.",
- 
+
     "project1.date": "2024 — Persönliches Studienprojekt",
     "project1.title": "Landwirtschaftliche Unkraut-Drohne — KI & Laser",
     "project1.desc": "Entwicklung eines Drohnenmodells für die Landwirtschaft, das künstliche Intelligenz nutzt, um Unkraut zu erkennen und per Laser zu entfernen. Arbeit an automatisierten, robotikorientierten Systemen mit KI, Sensoren und Aktoren.",
@@ -442,7 +442,7 @@ const translations = {
     "project3.date": "2022 — Praktikum BECREATIVE",
     "project3.title": "Webdesign & Entwicklung",
     "project3.desc": "Entwurf und Entwicklung responsiver Websites mit benutzerfreundlichen Admin-Oberflächen. Grafische Entwürfe, angepasst an Kundenbedürfnisse nach modernen UI/UX-Prinzipien.",
- 
+
     "skills.cnc.title": "CNC- & Industriekompetenzen",
     "skills.cnc.1": "CNC-Steuerungssysteme (FANUC, Mitsubishi, Mazatrol, Siemens, HeidenHain)",
     "skills.cnc.2": "CNC-Drehmaschinen",
@@ -469,13 +469,13 @@ const translations = {
     "skills.embedded.5": "KI & Machine Learning",
     "skills.embedded.6": "Robotik",
     "skills.os.title": "Betriebssysteme",
- 
+
     "project1.tech.1": "KI/Machine Learning",
     "project1.tech.2": "Robotik",
     "project1.tech.3": "Sensoren",
     "project1.tech.4": "Aktoren",
     "project1.tech.5": "Eingebettete Systeme",
- 
+
     "interests.title": "Interessen & Vision",
     "interests.1": "Elektronik",
     "interests.2": "Eingebettete Systeme",
@@ -483,9 +483,9 @@ const translations = {
     "interests.4": "Künstliche Intelligenz",
     "interests.5": "Fahrzeugmechanik",
     "interests.6": "Robotik",
- 
+
     "footer.text": "© 2026 Raed Ben Hmida. Alle Rechte vorbehalten.",
- 
+
     "softskills.title": "Soft Skills",
     "softskill.1": "Fortgeschrittene Diagnose",
     "softskill.2": "Komplexe Fehlerbehebung",
@@ -495,21 +495,21 @@ const translations = {
     "softskill.6": "Teamarbeit",
     "softskill.7": "Prozessoptimierung",
     "softskill.8": "Projektmanagement",
- 
+
     "interests.title": "Interessen & Vision",
     "languages.title": "Sprachen",
     "lang.arabic": "Arabisch",
     "lang.french": "Französisch",
     "lang.english": "Englisch",
     "lang.german": "Deutsch",
- 
+
     "cert1.issuer": "Berufliche Zertifizierung",
     "cert1.name": "Elektrische Befähigung",
     "cert2.name": "Einführung in IoT (Internet der Dinge)",
     "cert3.name": "Einführung in die digitale Fertigung",
     "cert4.name": "Teilnahme am KI-Workshop (Künstliche Intelligenz)",
     "cert5.name": "Microsoft Office Specialist",
- 
+
     "edu1.title": "Bachelorabschluss in Informationstechnologie",
     "edu1.org": "Höheres Institut für Technologiestudien, Kairouan, Tunesien",
     "edu1.date": "September 2020 — Juni 2023",
@@ -517,12 +517,12 @@ const translations = {
     "edu1.spec.text": "Eingebettete Systeme & Mobile Entwicklung",
     "edu2.title": "Abitur Technische Wissenschaften",
     "edu2.org": "Lycée Jemmel, Tunesien",
- 
+
     "cert1.date": "Juli 2026",
- 
+
     "contact.desc": "Haben Sie ein Projekt, eine Gelegenheit oder eine Frage? Zögern Sie nicht, mich zu kontaktieren. Ich bin immer an neuen Herausforderungen und Möglichkeiten interessiert.",
     "contact.cta.message": "✉ Nachricht senden",
- 
+
     "modal.title": "Nachricht senden",
     "modal.label.name": "Vollständiger Name",
     "modal.placeholder.name": "Ihr Name",
@@ -536,6 +536,7 @@ const translations = {
     "modal.btn.cancel": "Abbrechen"
   }
 };
+
 // ==========================================
 // APPLIQUER LA TRADUCTION AU DOM
 // ==========================================
@@ -547,6 +548,14 @@ function applyTranslations(lang) {
         const key = el.getAttribute("data-i18n");
         if (dict[key]) {
             el.textContent = dict[key];
+        }
+    });
+
+    // Contenu HTML (avec <strong>, <a>, etc.) des éléments avec data-i18n-html
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+        const key = el.getAttribute("data-i18n-html");
+        if (dict[key]) {
+            el.innerHTML = dict[key];
         }
     });
 
