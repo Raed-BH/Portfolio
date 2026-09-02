@@ -42,6 +42,7 @@ const translations = {
     "job1.title": "Technicien de Maintenance Corrective",
     "job1.context": "Multi-clients | Diagnostic de pannes critiques",
     "job1.date": "Août 2024 — Présent",
+    "job1.company": "JR Services, Tunisie",
     "job1.li1": "<strong>Diagnostic expert</strong> de pannes électriques, électroniques, mécaniques, pneumatiques, hydrauliques et d'automatisme sur tours CNC, centres d'usinage, presses, plieuses, embarreurs automatiques.",
     "job1.li2": "<strong>Collaboration régulière</strong> avec les équipes support des fabricants (Fanuc, Hestika, Mazak, Trumpf) pour résoudre des défaillances complexes que les techniciens standards ne trouvent pas.",
     "job1.li3": "<strong>Maîtrise avancée des systèmes de commande numérique</strong> : FANUC, Mitsubishi, Mazatrol, Siemens, HeidenHain sur machines Mazak, Star, Citizen, Miyano, Biglia, Hurco, HartFord, Mori Seiki, Trumpf, DMG Mori.",
@@ -140,7 +141,6 @@ const translations = {
     "softskill.7": "Optimisation de Processus",
     "softskill.8": "Gestion de Projets",
 
-    "interests.title": "Centres d'Intérêt & Vision",
     "languages.title": "Langues",
     "lang.arabic": "Arabe",
     "lang.french": "Français",
@@ -149,9 +149,13 @@ const translations = {
 
     "cert1.issuer": "Certification Professionnelle",
     "cert1.name": "Habilitation Électrique",
+    "cert2.issuer": "Cisco",
     "cert2.name": "Introduction IoT (Internet Of Things)",
+    "cert3.issuer": "Orange Tunisie",
     "cert3.name": "Introduction à la Fabrication Numérique",
+    "cert4.issuer": "Google Club ESSTHS",
     "cert4.name": "Participation à l'Atelier IA (Intelligence Artificielle)",
+    "cert5.issuer": "Microsoft",
     "cert5.name": "Microsoft Office Specialist",
 
     "edu1.title": "Licence Appliquée en Technologie de l'Informatique",
@@ -220,6 +224,7 @@ const translations = {
     "job1.title": "Corrective Maintenance Technician",
     "job1.context": "Multi-client | Critical failure diagnostics",
     "job1.date": "August 2024 — Present",
+    "job1.company": "JR Services, Tunisia",
     "job1.li1": "<strong>Expert diagnostics</strong> of electrical, electronic, mechanical, pneumatic, hydraulic and automation failures on CNC lathes, machining centers, presses, bending machines and automatic bar feeders.",
     "job1.li2": "<strong>Regular collaboration</strong> with manufacturer support teams (Fanuc, Hestika, Mazak, Trumpf) to resolve complex failures that standard technicians cannot find.",
     "job1.li3": "<strong>Advanced mastery of CNC control systems</strong>: FANUC, Mitsubishi, Mazatrol, Siemens, HeidenHain on Mazak, Star, Citizen, Miyano, Biglia, Hurco, HartFord, Mori Seiki, Trumpf and DMG Mori machines.",
@@ -318,7 +323,6 @@ const translations = {
     "softskill.7": "Process Optimization",
     "softskill.8": "Project Management",
 
-    "interests.title": "Interests & Vision",
     "languages.title": "Languages",
     "lang.arabic": "Arabic",
     "lang.french": "French",
@@ -327,9 +331,13 @@ const translations = {
 
     "cert1.issuer": "Professional Certification",
     "cert1.name": "Electrical Authorization",
+    "cert2.issuer": "Cisco",
     "cert2.name": "Introduction to IoT (Internet Of Things)",
+    "cert3.issuer": "Orange Tunisia",
     "cert3.name": "Introduction to Digital Manufacturing",
+    "cert4.issuer": "Google Club ESSTHS",
     "cert4.name": "AI (Artificial Intelligence) Workshop Participation",
+    "cert5.issuer": "Microsoft",
     "cert5.name": "Microsoft Office Specialist",
 
     "edu1.title": "Bachelor's Degree in Computer Technology",
@@ -398,6 +406,7 @@ const translations = {
     "job1.title": "Techniker für Instandsetzung",
     "job1.context": "Mehrere Kunden | Diagnose kritischer Störungen",
     "job1.date": "August 2024 — Heute",
+    "job1.company": "JR Services, Tunesien",
     "job1.li1": "<strong>Expertendiagnose</strong> von elektrischen, elektronischen, mechanischen, pneumatischen und hydraulischen Störungen sowie Automatisierungsfehlern an CNC-Drehmaschinen, Bearbeitungszentren, Pressen, Biegemaschinen und automatischen Stangenzuführungen.",
     "job1.li2": "<strong>Regelmäßige Zusammenarbeit</strong> mit den Support-Teams der Hersteller (Fanuc, Hestika, Mazak, Trumpf), um komplexe Störungen zu beheben, die Standardtechniker nicht finden.",
     "job1.li3": "<strong>Fortgeschrittene Beherrschung von CNC-Steuerungssystemen</strong>: FANUC, Mitsubishi, Mazatrol, Siemens, HeidenHain an Maschinen von Mazak, Star, Citizen, Miyano, Biglia, Hurco, HartFord, Mori Seiki, Trumpf und DMG Mori.",
@@ -496,7 +505,6 @@ const translations = {
     "softskill.7": "Prozessoptimierung",
     "softskill.8": "Projektmanagement",
 
-    "interests.title": "Interessen & Vision",
     "languages.title": "Sprachen",
     "lang.arabic": "Arabisch",
     "lang.french": "Französisch",
@@ -505,9 +513,13 @@ const translations = {
 
     "cert1.issuer": "Berufliche Zertifizierung",
     "cert1.name": "Elektrische Befähigung",
+    "cert2.issuer": "Cisco",
     "cert2.name": "Einführung in IoT (Internet der Dinge)",
+    "cert3.issuer": "Orange Tunesien",
     "cert3.name": "Einführung in die digitale Fertigung",
+    "cert4.issuer": "Google Club ESSTHS",
     "cert4.name": "Teilnahme am KI-Workshop (Künstliche Intelligenz)",
+    "cert5.issuer": "Microsoft",
     "cert5.name": "Microsoft Office Specialist",
 
     "edu1.title": "Bachelorabschluss in Informationstechnologie",
@@ -637,6 +649,111 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     revealEls.forEach(el => observer.observe(el));
+});
+
+// ==========================================
+// CARROUSEL MOBILE (Projets & Certificats)
+// ==========================================
+function initCarousel(trackSelector, dotsSelector, interval) {
+    const track = document.querySelector(trackSelector);
+    const dotsContainer = document.querySelector(dotsSelector);
+    if (!track || !dotsContainer) return;
+
+    const slides = Array.from(track.children);
+    if (slides.length <= 1) return;
+
+    // Générer les points de navigation
+    slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "carousel-dot";
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Aller à l'élément " + (i + 1));
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => {
+            slides[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            resetAutoplay();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.children);
+    let autoplayTimer = null;
+    let isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function getClosestIndex() {
+        const trackCenter = track.scrollLeft + track.clientWidth / 2;
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        slides.forEach((slide, i) => {
+            const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+            const distance = Math.abs(trackCenter - slideCenter);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = i;
+            }
+        });
+        return closestIndex;
+    }
+
+    function updateActiveDot() {
+        const current = getClosestIndex();
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+    }
+
+    function goToNext() {
+        const current = getClosestIndex();
+        const nextIndex = (current + 1) % slides.length;
+        slides[nextIndex].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+
+    function startAutoplay() {
+        if (reducedMotion || !isMobile) return;
+        stopAutoplay();
+        autoplayTimer = setInterval(goToNext, interval);
+    }
+
+    function stopAutoplay() {
+        if (autoplayTimer) {
+            clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        }
+    }
+
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+
+    // Pause au toucher / survol, reprise ensuite
+    track.addEventListener("touchstart", stopAutoplay, { passive: true });
+    track.addEventListener("touchend", () => setTimeout(startAutoplay, 3000), { passive: true });
+    track.addEventListener("mouseenter", stopAutoplay);
+    track.addEventListener("mouseleave", startAutoplay);
+
+    // Met à jour le point actif pendant le défilement manuel
+    let scrollTimeout;
+    track.addEventListener("scroll", () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveDot, 100);
+    }, { passive: true });
+
+    // Réagit au passage mobile <-> desktop
+    window.addEventListener("resize", () => {
+        isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (isMobile) {
+            startAutoplay();
+        } else {
+            stopAutoplay();
+        }
+    });
+
+    startAutoplay();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initCarousel(".projects-grid", "#projectsDots", 4500);
+    initCarousel(".certs-grid", "#certsDots", 4000);
 });
 
 // ==========================================
