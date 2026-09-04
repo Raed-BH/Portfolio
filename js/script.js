@@ -670,7 +670,7 @@ function initCarousel(trackSelector, dotsSelector, interval) {
         dot.setAttribute("aria-label", "Aller à l'élément " + (i + 1));
         if (i === 0) dot.classList.add("active");
         dot.addEventListener("click", () => {
-            slides[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            goToSlide(i);
             resetAutoplay();
         });
         dotsContainer.appendChild(dot);
@@ -680,6 +680,14 @@ function initCarousel(trackSelector, dotsSelector, interval) {
     let autoplayTimer = null;
     let isMobile = window.matchMedia("(max-width: 768px)").matches;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Défile UNIQUEMENT à l'intérieur du track (jamais la page entière)
+    function goToSlide(index) {
+        track.scrollTo({
+            left: slides[index].offsetLeft,
+            behavior: "smooth"
+        });
+    }
 
     function getClosestIndex() {
         const trackCenter = track.scrollLeft + track.clientWidth / 2;
@@ -704,7 +712,7 @@ function initCarousel(trackSelector, dotsSelector, interval) {
     function goToNext() {
         const current = getClosestIndex();
         const nextIndex = (current + 1) % slides.length;
-        slides[nextIndex].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        goToSlide(nextIndex);
     }
 
     function startAutoplay() {
