@@ -1061,8 +1061,8 @@ footer {
 
   .project-card,
   .cert-card {
-    flex: 0 0 88%;
-    scroll-snap-align: center;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
   }
 
   .project-card,
