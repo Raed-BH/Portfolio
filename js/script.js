@@ -282,7 +282,7 @@ const translations = {
     "skills.cnc.9": "Industrial Automation",
     "skills.cnc.10": "Drives & Servomotors",
     "skills.cnc.11": "Sensors & Actuators",
-    "skills.cnc.12": "Reading schematics",
+    "skills.cnc.12": "Electrical Schematic Reading",
     "skills.cnc.13": "Installation & Commissioning",
     "skills.web.title": "Web Development",
     "skills.mobile.title": "Mobile Development",
@@ -464,7 +464,7 @@ const translations = {
     "skills.cnc.9": "Industrieautomatisierung",
     "skills.cnc.10": "Umrichter & Servomotoren",
     "skills.cnc.11": "Sensoren & Aktoren",
-    "skills.cnc.12": "Schaltpläne lesen",
+    "skills.cnc.12": "Lesen von Schaltplänen",
     "skills.cnc.13": "Installation & Inbetriebnahme",
     "skills.web.title": "Webentwicklung",
     "skills.mobile.title": "Mobile Entwicklung",
@@ -678,7 +678,6 @@ function initCarousel(trackSelector, dotsSelector, interval) {
 
     const dots = Array.from(dotsContainer.children);
     let autoplayTimer = null;
-    let isMobile = window.matchMedia("(max-width: 768px)").matches;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     // Défile UNIQUEMENT à l'intérieur du track (jamais la page entière)
@@ -716,7 +715,7 @@ function initCarousel(trackSelector, dotsSelector, interval) {
     }
 
     function startAutoplay() {
-        if (reducedMotion || !isMobile) return;
+        if (reducedMotion) return;
         stopAutoplay();
         autoplayTimer = setInterval(goToNext, interval);
     }
@@ -745,16 +744,6 @@ function initCarousel(trackSelector, dotsSelector, interval) {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(updateActiveDot, 100);
     }, { passive: true });
-
-    // Réagit au passage mobile <-> desktop
-    window.addEventListener("resize", () => {
-        isMobile = window.matchMedia("(max-width: 768px)").matches;
-        if (isMobile) {
-            startAutoplay();
-        } else {
-            stopAutoplay();
-        }
-    });
 
     startAutoplay();
 }
