@@ -185,35 +185,61 @@ nav {
   padding: 80px 0 112px;
 }
 
-/* Grille hero : texte à gauche, portrait à droite */
+/* Grille hero : sur mobile, photo au-dessus du texte (colonne) ;
+   sur desktop, texte à gauche + photo positionnée à droite */
 .hero-grid {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 620px;
-  flex: 1 1 auto;
 }
 
 .hero-portrait {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  min-height: 420px;
-  width: auto;
-  max-width: 46%;
-  object-fit: cover;
-  object-position: top center;
-  z-index: 1;
-  pointer-events: none;
-  user-select: none;
+  display: block;
+  width: 68%;
+  max-width: 300px;
+  height: auto; /* garde les proportions réelles de la photo, rien n'est coupé */
+  margin: 0 auto;
+  border-radius: 12px;
+  order: -1; /* la photo passe avant le texte sur mobile */
+}
+
+@media (min-width: 900px) {
+  .hero {
+    min-height: 620px; /* laisse assez de place pour afficher la photo en entier */
+  }
+
+  .hero-grid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-portrait {
+    order: 0;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    height: 96%;   /* la largeur suit automatiquement pour garder toute l'image visible */
+    width: auto;
+    max-width: 42%;
+    max-height: none;
+    margin: 0;
+    border-radius: 0;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    /* fondu doux uniquement sur desktop, où l'image chevauche le fond sombre */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 22%);
+    mask-image: linear-gradient(to right, transparent 0%, black 22%);
+  }
 }
 
 .accent-line {
