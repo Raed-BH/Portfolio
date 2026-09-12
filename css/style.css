@@ -202,43 +202,36 @@ nav {
 
 .hero-portrait {
   display: block;
-  width: 68%;
-  max-width: 300px;
-  height: auto; /* garde les proportions réelles de la photo, rien n'est coupé */
+  width: 72%;
+  max-width: 320px;
+  height: auto;         /* proportions réelles conservées, image jamais recadrée */
+  object-fit: contain;  /* toujours visible en entier : visage + corps complets */
   margin: 0 auto;
   border-radius: 12px;
   order: -1; /* la photo passe avant le texte sur mobile */
 }
 
 @media (min-width: 900px) {
-  .hero {
-    min-height: 620px; /* laisse assez de place pour afficher la photo en entier */
-  }
-
   .hero-grid {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
+  }
+
+  .hero-content {
+    flex: 1 1 auto;
   }
 
   .hero-portrait {
     order: 0;
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    right: 0;
-    height: 96%;   /* la largeur suit automatiquement pour garder toute l'image visible */
-    width: auto;
-    max-width: 42%;
-    max-height: none;
+    flex: 0 0 auto;
+    width: 34%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
     margin: 0;
-    border-radius: 0;
-    z-index: 1;
-    pointer-events: none;
-    user-select: none;
-    /* fondu doux uniquement sur desktop, où l'image chevauche le fond sombre */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 22%);
-    mask-image: linear-gradient(to right, transparent 0%, black 22%);
+    border-radius: 16px;
   }
 }
 
@@ -1032,13 +1025,6 @@ footer {
   color: var(--color-error);
   border: 1px solid var(--color-error);
   display: block;
-}
-
-/* Hero : le portrait ne s'affiche qu'à partir de 900px pour ne pas gêner le texte */
-@media (max-width: 900px) {
-  .hero-portrait {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
