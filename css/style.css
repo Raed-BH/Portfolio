@@ -180,7 +180,40 @@ nav {
 
 /* Hero Section */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 80px 0 112px;
+}
+
+/* Grille hero : texte à gauche, portrait à droite */
+.hero-grid {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  flex: 1 1 auto;
+}
+
+.hero-portrait {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  min-height: 420px;
+  width: auto;
+  max-width: 46%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
 }
 
 .accent-line {
@@ -973,6 +1006,13 @@ footer {
   color: var(--color-error);
   border: 1px solid var(--color-error);
   display: block;
+}
+
+/* Hero : le portrait ne s'affiche qu'à partir de 900px pour ne pas gêner le texte */
+@media (max-width: 900px) {
+  .hero-portrait {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
