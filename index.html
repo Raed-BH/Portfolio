@@ -23,6 +23,7 @@
         <a href="#profil" data-i18n="nav.profil">Profil</a>
         <a href="#experience" data-i18n="nav.experience">Expérience</a>
         <a href="#projets" data-i18n="nav.projets">Projets</a>
+        <a href="#galerie">Galerie</a>
         <a href="#competences" data-i18n="nav.competences">Compétences</a>
         <a href="#certificats" data-i18n="nav.certificats">Certificats</a>
         <a href="#formation" data-i18n="nav.formation">Formation</a>
@@ -241,6 +242,46 @@
       </div>
     </div>
     <div class="carousel-dots" id="projectsDots"></div>
+  </div>
+</section>
+<!-- Galerie section-->
+<section id="galerie" class="reveal">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Galerie</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Photo -->
+      <figure class="gallery-item">
+        <img
+          src="images/gallery/machine-cnc.jpg"
+          alt="Machine CNC en cours de maintenance"
+          loading="lazy"
+        >
+        <figcaption>Maintenance d'une machine CNC</figcaption>
+      </figure>
+
+      <!-- Photo -->
+      <figure class="gallery-item">
+        <img
+          src="images/gallery/carte-electronique.jpg"
+          alt="Carte électronique industrielle"
+          loading="lazy"
+        >
+        <figcaption>Diagnostic électronique</figcaption>
+      </figure>
+
+      <!-- Vidéo -->
+      <figure class="gallery-item gallery-video">
+        <video controls preload="metadata">
+          <source src="videos/demo-machine.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+        <figcaption>Démonstration technique</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
