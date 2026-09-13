@@ -652,7 +652,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==========================================
-// CARROUSEL MOBILE (Projets & Certificats)
+// CARROUSEL MOBILE (Projets & Certificats & Galerie)
 // ==========================================
 function initCarousel(trackSelector, dotsSelector, interval) {
     const track = document.querySelector(trackSelector);
@@ -751,7 +751,25 @@ function initCarousel(trackSelector, dotsSelector, interval) {
 document.addEventListener("DOMContentLoaded", () => {
     initCarousel(".projects-grid", "#projectsDots", 4500);
     initCarousel(".certs-grid", "#certsDots", 4000);
+
+    // Slider de la galerie
+    initCarousel(".gallery-grid", "#galleryDots", 5000);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const gallery = document.querySelector(".gallery-grid");
+
+    if (!gallery) {
+        return;
+    }
+
+    gallery.addEventListener("scroll", () => {
+        gallery.querySelectorAll("video").forEach(video => {
+            video.pause();
+        });
+    }, { passive: true });
+});
+
+
 
 // ==========================================
 // LANGUAGE DROPDOWN
