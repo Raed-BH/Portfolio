@@ -23,7 +23,7 @@
         <a href="#profil" data-i18n="nav.profil">Profil</a>
         <a href="#experience" data-i18n="nav.experience">Expérience</a>
         <a href="#projets" data-i18n="nav.projets">Projets</a>
-        <a href="#galerie">Galerie</a>
+        <a href="#galerie" data-i18n="nav.galerie">Galerie</a>
         <a href="#competences" data-i18n="nav.competences">Compétences</a>
         <a href="#certificats" data-i18n="nav.certificats">Certificats</a>
         <a href="#formation" data-i18n="nav.formation">Formation</a>
@@ -206,7 +206,7 @@
           <span class="tech-tag" data-i18n="project1.tech.2">Robotique</span>
           <span class="tech-tag" data-i18n="project1.tech.3">Capteurs</span>
           <span class="tech-tag" data-i18n="project1.tech.4">Actionneurs</span>
-          <span class="tech-tag">Laser</span>
+          <span class="tech-tag" data-i18n="tech.laser">Laser</span>
           <span class="tech-tag" data-i18n="project1.tech.5">Systèmes Embarqués</span>
         </div>
       </div>
@@ -218,11 +218,11 @@
           Application full-stack combinant une application mobile et une plateforme web pour optimiser la gestion des voyages et le suivi en temps réel des bus. Intégration du standard <a href="https://gtfs.org" target="_blank" rel="noopener">GTFS</a> (General Transit feed specification) pour gestion des données de transport public.
         </p>
         <div class="project-tech">
-          <span class="tech-tag">Flutter</span>
-          <span class="tech-tag">Django</span>
-          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag" data-i18n="tech.flutter">Flutter</span>
+          <span class="tech-tag" data-i18n="tech.django">Django</span>
+          <span class="tech-tag" data-i18n="tech.postgresql">PostgreSQL</span>
           <span class="tech-tag"><a href="https://gtfs.org" target="_blank" rel="noopener">GTFS</a></span>
-          <span class="tech-tag">Real-time</span>
+          <span class="tech-tag" data-i18n="tech.realtime">Real-time</span>
         </div>
       </div>
 
@@ -233,10 +233,10 @@
           Conception et développement de sites web responsives avec interfaces d'administration conviviales. Maquettes graphiques adaptées aux besoins des clients avec principes modernes de UI/UX.
         </p>
         <div class="project-tech">
-          <span class="tech-tag">HTML5</span>
-          <span class="tech-tag">CSS3</span>
-          <span class="tech-tag">Bootstrap</span>
-          <span class="tech-tag">PHP</span>
+          <span class="tech-tag" data-i18n="tech.html5">HTML5</span>
+          <span class="tech-tag" data-i18n="tech.css3">CSS3</span>
+          <span class="tech-tag" data-i18n="tech.bootstrap">Bootstrap</span>
+          <span class="tech-tag" data-i18n="tech.php">PHP</span>
           <span class="tech-tag">UI/UX</span>
         </div>
       </div>
@@ -248,7 +248,7 @@
 <section id="galerie" class="reveal">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Galerie</h2>
+      <h2 class="section-title" data-i18n="section.galerie">Galerie</h2>
       <div class="section-line"></div>
     </div>
 
@@ -257,11 +257,11 @@
       <figure class="gallery-card reveal-item">
         <img
           src="images/gallery/machine-cnc.jpg"
-          alt="Machine CNC en cours de maintenance"
+          data-i18n-alt="gallery.alt.machine" data-i18n-alt="gallery.alt.machine" alt="Machine CNC en cours de maintenance"
           loading="lazy"
         >
         <figcaption>
-          Maintenance d'une machine CNC
+          <span data-i18n="gallery.1">Maintenance d'une machine CNC</span>
         </figcaption>
       </figure>
 
@@ -269,11 +269,11 @@
       <figure class="gallery-card reveal-item">
         <img
           src="images/gallery/Photo 2.png"
-          alt="Carte électronique industrielle"
+          data-i18n-alt="gallery.alt.board" data-i18n-alt="gallery.alt.board" alt="Carte électronique industrielle"
           loading="lazy"
         >
         <figcaption>
-          Diagnostic électronique
+          <span data-i18n="gallery.2">Diagnostic électronique</span>
         </figcaption>
       </figure>
      
@@ -281,33 +281,33 @@
       <figure class="gallery-card gallery-video reveal-item">
         <video controls preload="metadata">
           <source src="videos/Diagnostic_maintenance_portfolio.mp4" type="video/mp4">
-          Votre navigateur ne supporte pas la lecture vidéo.
+          <span data-i18n="gallery.videoFallback">Votre navigateur ne supporte pas la lecture vidéo.</span>
         </video>
 
         <figcaption>
-          Résolution de pannes critiques
+          <span data-i18n="gallery.3">Résolution de pannes critiques</span>
         </figcaption>
       </figure>
       <!-- Photo 3 -->
       <figure class="gallery-card reveal-item">
         <img
           src="images/gallery/Photo 2.jpg"
-          alt="Carte électronique industrielle"
+          data-i18n-alt="gallery.alt.board" data-i18n-alt="gallery.alt.board" alt="Carte électronique industrielle"
           loading="lazy"
         >
         <figcaption>
-          Diagnostic électronique
+          <span data-i18n="gallery.2">Diagnostic électronique</span>
         </figcaption>
       </figure>
       <!-- Photo 4 -->
       <figure class="gallery-card reveal-item">
         <img
           src="images/gallery/Photo 2.jpg"
-          alt="Carte électronique industrielle"
+          data-i18n-alt="gallery.alt.board" data-i18n-alt="gallery.alt.board" alt="Carte électronique industrielle"
           loading="lazy"
         >
         <figcaption>
-          Diagnostic électronique
+          <span data-i18n="gallery.2">Diagnostic électronique</span>
         </figcaption>
       </figure>
 
@@ -315,11 +315,11 @@
       <figure class="gallery-card gallery-video reveal-item">
         <video controls preload="metadata">
           <source src="videos/installation_des_machine_CNC.mp4" type="video/mp4">
-          Votre navigateur ne supporte pas la lecture vidéo.
+          <span data-i18n="gallery.videoFallback">Votre navigateur ne supporte pas la lecture vidéo.</span>
         </video>
 
         <figcaption>
-          Installation des machine CNC
+          <span data-i18n="gallery.6">Installation des machines CNC</span>
         </figcaption>
       </figure>
     </div>
@@ -360,35 +360,35 @@
       <div class="skill-category">
         <h3 data-i18n="skills.web.title">Développement Web</h3>
         <div class="skill-tags">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">Responsive Design</span>
+          <span class="skill-tag" data-i18n="tech.html5">HTML5</span>
+          <span class="skill-tag" data-i18n="tech.css3">CSS3</span>
+          <span class="skill-tag" data-i18n="tech.javascript">JavaScript</span>
+          <span class="skill-tag" data-i18n="tech.php">PHP</span>
+          <span class="skill-tag" data-i18n="tech.bootstrap">Bootstrap</span>
+          <span class="skill-tag" data-i18n="tech.django">Django</span>
+          <span class="skill-tag" data-i18n="tech.responsive">Responsive Design</span>
         </div>
       </div>
 
       <div class="skill-category">
         <h3 data-i18n="skills.mobile.title">Développement Mobile</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Flutter</span>
-          <span class="skill-tag">Dart</span>
-          <span class="skill-tag">Android</span>
-          <span class="skill-tag">iOS</span>
-          <span class="skill-tag">Java</span>
+          <span class="skill-tag" data-i18n="tech.flutter">Flutter</span>
+          <span class="skill-tag" data-i18n="tech.dart">Dart</span>
+          <span class="skill-tag" data-i18n="tech.android">Android</span>
+          <span class="skill-tag" data-i18n="tech.ios">iOS</span>
+          <span class="skill-tag" data-i18n="tech.java">Java</span>
         </div>
       </div>
 
       <div class="skill-category">
         <h3 data-i18n="skills.data.title">Gestion de Données & Frameworks</h3>
         <div class="skill-tags">
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag" data-i18n="tech.sql">SQL</span>
+          <span class="skill-tag" data-i18n="tech.mysql">MySQL</span>
           <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">Flask</span>
+          <span class="skill-tag" data-i18n="tech.django">Django</span>
+          <span class="skill-tag" data-i18n="tech.flask">Flask</span>
           <span class="skill-tag"><a href="https://gtfs.org" target="_blank" rel="noopener">GTFS</a> (General transit feed specification)</span>
         </div>
       </div>
@@ -396,12 +396,12 @@
       <div class="skill-category">
         <h3 data-i18n="skills.lang.title">Langages de Programmation</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">C</span>
-          <span class="skill-tag">Java/JEE</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Dart</span>
-          <span class="skill-tag">PHP</span>
+          <span class="skill-tag" data-i18n="tech.python">Python</span>
+          <span class="skill-tag" data-i18n="tech.c">C</span>
+          <span class="skill-tag" data-i18n="tech.javajee">Java/JEE</span>
+          <span class="skill-tag" data-i18n="tech.javascript">JavaScript</span>
+          <span class="skill-tag" data-i18n="tech.dart">Dart</span>
+          <span class="skill-tag" data-i18n="tech.php">PHP</span>
         </div>
       </div>
 
@@ -409,13 +409,13 @@
         <h3 data-i18n="skills.embedded.title">Systèmes Embarqués & IA</h3>
         <div class="skill-tags">
           <span class="skill-tag" data-i18n="skills.embedded.1">Microcontrôleurs</span>
-          <span class="skill-tag">Arduino</span>
-          <span class="skill-tag">Raspberry Pi</span>
+          <span class="skill-tag" data-i18n="tech.arduino">Arduino</span>
+          <span class="skill-tag" data-i18n="tech.raspberry">Raspberry Pi</span>
           <span class="skill-tag" data-i18n="skills.embedded.2">RTOS (Systèmes temps réel)</span>
           <span class="skill-tag" data-i18n="skills.embedded.3">Intégration capteurs</span>
           <span class="skill-tag" data-i18n="skills.embedded.4">Intégration matériel-logiciel</span>
-          <span class="skill-tag">Firmware</span>
-          <span class="skill-tag">IoT</span>
+          <span class="skill-tag" data-i18n="tech.firmware">Firmware</span>
+          <span class="skill-tag" data-i18n="tech.iot">IoT</span>
           <span class="skill-tag" data-i18n="skills.embedded.5">IA & Machine Learning</span>
           <span class="skill-tag" data-i18n="skills.embedded.6">Robotique</span>
         </div>
@@ -424,9 +424,9 @@
       <div class="skill-category">
         <h3 data-i18n="skills.os.title">Systèmes d'Exploitation</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Windows</span>
-          <span class="skill-tag">Linux</span>
-          <span class="skill-tag">macOS</span>
+          <span class="skill-tag" data-i18n="tech.windows">Windows</span>
+          <span class="skill-tag" data-i18n="tech.linux">Linux</span>
+          <span class="skill-tag" data-i18n="tech.macos">macOS</span>
         </div>
       </div>
     </div>
@@ -454,10 +454,10 @@
         <span class="interest-tag" data-i18n="interests.2">Systèmes Embarqués</span>
         <span class="interest-tag" data-i18n="interests.3">Programmation Automatique</span>
         <span class="interest-tag" data-i18n="interests.4">Intelligence Artificielle</span>
-        <span class="interest-tag">IoT</span>
+        <span class="interest-tag" data-i18n="interests.iot">IoT</span>
         <span class="interest-tag" data-i18n="interests.5">Mécanique Automobile</span>
         <span class="interest-tag" data-i18n="interests.6">Robotique</span>
-        <span class="interest-tag">Industrie 4.0</span>
+        <span class="interest-tag" data-i18n="interests.industry40">Industrie 4.0</span>
       </div>
     </div>
 
@@ -512,25 +512,25 @@
       <div class="cert-card reveal-item">
         <p class="cert-issuer" data-i18n="cert2.issuer">Cisco</p>
         <h3 class="cert-name" data-i18n="cert2.name">Introduction IoT(Internet Of Things)</h3>
-        <p class="cert-date">2022</p>
+        <p class="cert-date" data-i18n="cert.date.2022">2022</p>
       </div>
 
       <div class="cert-card reveal-item">
         <p class="cert-issuer" data-i18n="cert3.issuer">Orange Tunisie</p>
         <h3 class="cert-name" data-i18n="cert3.name">Introduction à la Fabrication Numérique</h3>
-        <p class="cert-date">2022</p>
+        <p class="cert-date" data-i18n="cert.date.2022">2022</p>
       </div>
 
       <div class="cert-card reveal-item">
         <p class="cert-issuer" data-i18n="cert4.issuer">Google Club ESSTHS</p>
         <h3 class="cert-name" data-i18n="cert4.name">Participation à l'Atelier IA(Intelligence Artificielle)</h3>
-        <p class="cert-date">2021</p>
+        <p class="cert-date" data-i18n="cert.date.2021">2021</p>
       </div>
 
       <div class="cert-card reveal-item">
         <p class="cert-issuer" data-i18n="cert5.issuer">Microsoft</p>
         <h3 class="cert-name" data-i18n="cert5.name">Microsoft Office Specialist</h3>
-        <p class="cert-date">2021</p>
+        <p class="cert-date" data-i18n="cert.date.2021">2021</p>
       </div>
     </div>
     <div class="carousel-dots" id="certsDots"></div>
@@ -555,7 +555,7 @@
     <div class="edu">
       <h3 class="edu-title" data-i18n="edu2.title">Baccalauréat Sciences Techniques</h3>
       <p class="edu-org" data-i18n="edu2.org">Lycée Jemmel, Tunisie</p>
-      <p class="edu-date">2016 — 2020</p>
+      <p class="edu-date" data-i18n="edu2.date">2016 — 2020</p>
     </div>
   </div>
 </section>
