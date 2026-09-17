@@ -162,7 +162,7 @@ const translations = {
     "edu1.org": "Institut Supérieur des Études Technologiques, Kairouan, Tunisie",
     "edu1.date": "Septembre 2020 — Juin 2023",
     "edu1.spec.label": "Spécialisation :",
-    "edu1.spec.text": "Systèmes Embarqués & Développement Mobile",
+    "edu1.spec.text": "Systèmes Embarqués & Mobiles",
     "edu2.title": "Baccalauréat Sciences Techniques",
     "edu2.org": "Lycée Jemmel, Tunisie",
 
@@ -390,7 +390,7 @@ const translations = {
     "edu1.org": "Higher Institute of Technological Studies, Kairouan, Tunisia",
     "edu1.date": "September 2020 — June 2023",
     "edu1.spec.label": "Specialization:",
-    "edu1.spec.text": "Embedded Systems & Mobile Development",
+    "edu1.spec.text": "Embedded Systems & Mobiles",
     "edu2.title": "Technical Sciences Baccalaureate",
     "edu2.org": "Lycée Jemmel, Tunisia",
 
@@ -618,7 +618,7 @@ const translations = {
     "edu1.org": "Höheres Institut für Technologiestudien, Kairouan, Tunesien",
     "edu1.date": "September 2020 — Juni 2023",
     "edu1.spec.label": "Spezialisierung:",
-    "edu1.spec.text": "Eingebettete Systeme & Mobile Entwicklung",
+    "edu1.spec.text": "Eingebettete Systeme & Mobile",
     "edu2.title": "Abitur Technische Wissenschaften",
     "edu2.org": "Lycée Jemmel, Tunesien",
 
